@@ -1,0 +1,22 @@
+<ion-header class="headerone">
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>
+            <div class="notification-header" style="color:white;">
+                Notification
+            </div>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let d of data">
+        <!--<ion-item>-->
+        <ion-card-content>
+            <p>You Need To Return The Book <b>{{d.title}}</b> by <b>{{d.dueDate}}</b> !!</p>
+        </ion-card-content>
+        <!--</ion-item>-->
+    </ion-card>
+</ion-content>

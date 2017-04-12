@@ -1,0 +1,31 @@
+<ion-header >
+
+  <ion-navbar>
+    <ion-title>Issued History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+<ion-item color="primary" class="issuedHistory">
+  <ion-label class="issuedHistory">Select Date</ion-label>
+  <ion-datetime displayFormat="MM/DD/YYYY" min="2016" max="2020-10-31" pickerFormat="MMMM DD YYYY" [(ngModel)]="myDate" (ionChange)="getMyIssuedHistory(myDate)">
+  </ion-datetime>
+</ion-item>
+	
+	<ion-row *ngIf="showBooks" class="headingIssued">Books Issued By You on {{myDate}} are:</ion-row>
+		<ion-row *ngIf="Nobooks" class="NoBooks">Ooops! Looks like You Did Not Issue Any Book on this Date</ion-row>
+		<ion-card *ngFor="let book of books">
+			<ion-card-header class="bookTitle">{{book.title}}</ion-card-header>
+
+			<img [src]="book.image" class="bookImg" />
+
+			<ion-card-content>
+				<!--<div class="bookAuthor">By: {{book.authors}}</div>
+				<div class="bookRenewDetails">Available:<span class="bookRenewTime">{{book.available}}</span></div>-->
+				<div class="bookRenewDetails">Issued on:<span class="bookRenewTime">{{book.issueDate}}</span></div>
+      <div class="bookRenewDetails">DueDate:<span class="returnDate">{{book.dueDate}}</span></div>
+			</ion-card-content>
+		</ion-card>
+
+</ion-content>

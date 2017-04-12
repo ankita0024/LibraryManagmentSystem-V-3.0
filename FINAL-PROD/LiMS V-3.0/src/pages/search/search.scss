@@ -1,0 +1,89 @@
+page-search {
+
+ .tabbar{
+     opacity: 1;
+ } 
+ .searchPage{
+
+  margin-top: 17%;
+       height: 80%;
+    background-color: #E0E0E0!important;
+    font-family: "roboto";
+
+ }
+.categoryTitle{
+     font-family: "catamaran";
+         font-weight: 500;
+        //  text-align: center;
+}
+.fixed{
+    position:fixed;
+}
+
+
+.bookTitle {
+    font-family: "catamaran";
+    font-size: 16pt;
+    line-height: 3vh;
+}
+.bookAuthor {
+    font-family:  "roboto";
+    font-size: 12pt;
+    line-height: 3vh;
+}
+
+.bookRenewTime {
+    color: green;
+}
+.bookRenewDetails {
+    font-family: "catamaran";
+    font-size: 14pt;
+}
+.segementSearch{
+margin-top: 1em;
+}
+    
+.searchResultsTitle {
+    color: #2980b9;
+    font-family: "catamaran";
+    text-align: center;
+    font-size: 18pt;
+    // text-decoration: underline;
+}
+.segmentText{
+        font-size: 1em !important;
+        font-weight:700 !important;
+}
+.searchFilter{
+  margin-top: 0.5em;
+    margin-left: -0.1em;
+    font-size: 1.9em;
+    color: #2980b9;
+}
+  .categoriesPopover .popover-content{
+  top: 135.813px!important;
+    left: 99.25px!important;
+    height: 80%!important;
+// }
+  }
+ .searchPageRating ul {
+  padding: 2px;
+ margin:1px;
+  &.rating li {
+    padding: 1px 1px!important;
+    background: none;
+    color: #ffb400;
+ 
+    ion-icon {
+      font-size: 20px;
+    }
+  }
+}
+.label-md{
+    margin: 0px;
+}
+.bookTitle{
+    font-size:14pt;
+}
+}
+

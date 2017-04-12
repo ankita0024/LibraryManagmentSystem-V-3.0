@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Recommendation</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+
+ <ion-card class="detailViewPage" *ngFor="let b of book" (click)=showDetailView(b)>
+          <ion-row class="bookDiv">
+          <ion-col width-33>
+
+            <img class="img-thumbnail bookImg" src="{{b.image}}" alt="book Image">
+          </ion-col>
+          <ion-col width-67 class="rightAlign">
+
+            <div class="bookTitle">Name: {{b.title}}<br></div><br>
+            <div class="bookAuthor">Author: {{b.authors}}<br></div><br>
+            <div class="bookPublisher">Publisher: {{b.publisher}}<br></div>
+
+          </ion-col>
+           </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,35 @@
+
+
+<ion-content #mycontent>
+   <h3> Welcome to Kalinga Library.</h3>
+  <ion-slides pager  #slides>
+<ion-slide >
+    <img class="slideImg" src="./assets/images/Manual-start.png">
+ <p>"Everything you need for better future and success has already been written. And guess what? All you have to do is go to the library...."</p>
+    <button ion-button large clear icon-right color="primary" (click)="next(slides, 1)">
+        Lets Get Started
+        <ion-icon name="arrow-forward" ></ion-icon>
+      </button> 
+  </ion-slide>
+   <ion-slide>
+     <h5 class="userManualHeading">Search A Book!</h5>
+    <img class="slideImg" src="./assets/images/Manual1.jpg">
+    <p>You can start browsing for books in the library by clicking on the search icon.You can filter the books based on Categories</p>  
+  </ion-slide>
+   <ion-slide>
+     <h5 class="userManualHeading">Request A Book!</h5>
+     <img class="slideImg" src="./assets/images/Manual2.jpg">
+     <p>To request a book,click on any of the books displayed! Collect the book from the library,after requesting!</p>
+  </ion-slide>
+   <ion-slide>
+     <h5 class="userManualHeading">Renew & Return!</h5>
+     <img class="slideImg" src="./assets/images/Manual3.jpg">
+       <p>You can renew a book only once.Return the book on or before the specified due date</p>
+  </ion-slide>
+   <ion-slide>
+     <h5 class="userManualHeading">Log-Out!</h5>
+     <img  class="slideImg" src="./assets/images/Manual4.jpg">
+     <p>You can log-out by clicking on the button as shown above!</p>
+  </ion-slide>
+</ion-slides>
+</ion-content>

@@ -1,0 +1,74 @@
+
+<ion-header  >
+  <ion-navbar color="primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >Kalinga Library</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="homePage" #mycontent [hidden]="flagHome1" padding>
+<ion-item  *ngIf="flag1">
+<p class="divTitle">My Books</p>
+<div [ngClass]="{'issuedCircle1': issuedCircle1, 'issuedCircle2': issuedCircle2, 'issuedCircle3': issuedCircle3}"><p class="Circletext">{{books.length}}/3</p></div>
+</ion-item>
+
+<ion-card *ngFor="let book of books;let i=index">
+    <ion-row class="bookDiv">
+    <ion-col width-33>
+        <img class="img-thumbnail bookImg" src="{{book.image}}" alt="book Image">
+    </ion-col>
+    <ion-col width-67 class="rightAlign">
+        <!--<ion-row>-->
+        <span class="bookTitle">{{book.title}}</span><br>
+        <span class="bookAuthor">{{book.authors}}<br></span>
+        <span class="bookRenewDetails">Available: <span class="bookRenewTime">{{book.available}}</span></span><br>
+        <span class="bookRenewDetails" *ngIf="book.isIssued && !book.isReturnRequested" ng-class="$ctrl.dayDiff($index)">Due Date:</span> <span class="dueDate"  *ngIf="book.isIssued && !book.isReturnRequested">{{book.dueDate}}</span><br>
+        <!--</ion-row>-->
+ 
+    </ion-col>
+    </ion-row>
+    
+    <hr/>
+    
+   <ion-row class=cardAction *ngIf=!book.isReturnRequested>     
+     <ion-col width-50 *ngIf=book.isIssued>
+            <!--<button ion-button round ion-button color="danger" class="bookRenewButtons"  (click)="presentPopover($event,book)">Return</button>-->
+        <button ion-button color="light" clear icon-left class="bookRenewButtons" (click)="presentPopover($event,book)" >
+            <ion-icon  class="returnIcon" name="share-alt">  </ion-icon>
+            Return
+            </button>
+        </ion-col>
+        
+        <ion-col width-50 *ngIf="book.isIssued && book.issueDetails[0].isRenewable">    
+        <button ion-button color="light" icon-left clear class="bookRenewButtonsDiv bookRenewButtons"  (click)="presentConfirm(i)">
+            <ion-icon class=renewIcon name="refresh-circle" clear>  </ion-icon>
+            Renew
+            </button>
+        </ion-col>
+        
+       <ion-col offset-50 width-50 *ngIf="!book.isIssued && !book.isReturnRequested">
+        <button ion-button color="light" icon-left clear class="bookRenewButtonsDiv bookRenewButtons cancelButton" (click)="cancelRequest(book)" >
+            <ion-icon class="danger" name="trash" clear>  </ion-icon>
+            Cancel Request
+            </button>
+        </ion-col> 
+      </ion-row>
+      
+         <ion-row class=returnMsg *ngIf="book.isReturnRequested">    
+         <span>&nbsp;&nbsp;Please return this book to the library!</span>
+         </ion-row>
+
+           <ion-row class=collectMsg *ngIf="!book.isIssued && !book.isReturnRequested" >
+         <span>&nbsp;&nbsp;Please collect this book from the library!</span>
+          </ion-row>
+
+</ion-card>
+<!--<page-user-manual *ngIf="!flag1"> </page-user-manual>-->
+
+</ion-content>
+<!--<ion-content class="homePage" [hidden]="!flagHome1">Hey there!!!</ion-content>-->
+<page-user-manual [hidden]="flag1"></page-user-manual>
+

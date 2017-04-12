@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            <ion-row>
+                <ion-col>
+                    <ion-icon name="home"></ion-icon> Kalinga Library</ion-col>
+                <ion-icon name="log-out" (click)="logOut()"></ion-icon>
+            </ion-row>
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+    <ion-row>
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome {{this.name}}!</h2>
+    </ion-row>
+    <ion-row>
+        <ion-col width-50>
+            <ion-card (click)="listOfBooks()">
+                <img src="./assets/images/book1.jpg">
+                <button ion-button icon-left clear small>
+        <p class="button-name">List of books</p>
+      </button>
+            </ion-card>
+        </ion-col>
+
+
+        <ion-col width-50>
+            <ion-card (click)="roles()">
+                <img src="./assets/images/book2.jpg">
+                <button ion-button icon-left clear small>
+        <p class="button-name">Roles & Permissions</p>
+      </button>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+        <ion-col width-50>
+            <ion-card (click)="approvals()">
+                <img src="./assets/images/book3.jpg">
+                <button ion-button icon-left clear small>
+       <p class="button-name">Approval</p>
+      </button>
+            </ion-card>
+        </ion-col>
+        <ion-col width-50>
+            <ion-card (click)="transferAdmin()">
+                <img src="./assets/images/book4.jpg">
+                <button ion-button icon-left clear small>
+       <p class="button-name">Transfer Admin access</p>
+      </button>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+        <ion-col width-50>
+            <ion-card (click)="reports()">
+                <img src="./assets/images/book5.jpg">
+                <button ion-button icon-left clear small>
+        <p class="button-name">Reports</p>
+      </button>
+            </ion-card>
+        </ion-col>
+
+
+        <ion-col width-50>
+            <ion-card (click)="addBooks()">
+                <img src="./assets/images/add book.jpg">
+                <button ion-button icon-left clear small>
+        <p class="button-name">Add Books</p>
+      </button>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

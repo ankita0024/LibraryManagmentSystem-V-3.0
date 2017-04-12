@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Search</ion-title>
+    </ion-navbar>
+
+    <ion-toolbar color="light">
+
+
+        <ion-segment>
+            <ion-segment-button value="Title" class="segmentText segment-activated" (ionSelect)="setTitle()">
+                Title
+            </ion-segment-button>
+            <ion-segment-button value="Author" class="segmentText" (ionSelect)="setAuthor()">
+                Author
+            </ion-segment-button>
+        </ion-segment>
+
+    </ion-toolbar>
+
+
+
+    <ion-row>
+        <ion-col width-90>
+            <ion-searchbar color="primary" [(ngModel)]=searchInput (ionInput)="getItems(searchInput)" showCancelButton="true" (ionCancel)="goBackToCategories()">
+            </ion-searchbar>
+        </ion-col>
+        <ion-col width-10>
+            <!--<button ion-button icon-only >-->
+            <ion-icon class="searchFilter" name="options" (click)=presentPopover($event)></ion-icon>
+            <!--</button>-->
+        </ion-col>
+    </ion-row>
+</ion-header>
+
+<h2 class="searchResultsTitle">Search Results</h2>
+
+<ion-content>
+
+    <ion-card class="searchClass" *ngFor="let book of categorisedBooks" >
+
+        <ion-list>
+            <ion-item-sliding #item>
+                <ion-item>
+
+                    <ion-row >
+                        <ion-col width-33>
+                            <img class=" img-thumbnail bookImg" src="{{book.image}}" alt="book Image" (click)="showDetailView(book)" >
+                        </ion-col>
+                        <ion-col width-67 class="rightAlign">
+                            <!--<ion-content >-->
+                            <span class="wrapword">{{book.title}}</span><br>
+                            <span class="bookAuthor">{{book.authors}}</span><br>
+                            <rating [ngModel]="book.avgRating" readOnly="true" class="searchPageRating"></rating>
+                            <span class="bookRenewDetails" style="text-align: right;">Available: <span class="bookRenewTime">{{book.available}}</span></span>
+                            <!--</ion-content>-->
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+                <ion-item-options side="left">
+                    <button ion-button ion-button color="tweak" (click)="requestBook(book.isbn)">Request</button>
+                </ion-item-options>
+                <ion-item-options side="right">
+                    <button ion-button ion-button color="tweak" (click)="addWish(book.isbn)">Add to wish list</button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+
+    </ion-card>
+</ion-content>

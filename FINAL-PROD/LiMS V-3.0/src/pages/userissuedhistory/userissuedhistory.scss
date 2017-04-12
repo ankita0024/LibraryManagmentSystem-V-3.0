@@ -1,0 +1,45 @@
+page-userissuedhistory {
+    font-family: "roboto";
+.bookTitle {
+    font-family: "catamaran";
+    font-size: 20pt;
+    line-height: 3vh;
+}
+.bookAuthor {
+    font-family: "roboto";
+    font-size: 12pt;
+    line-height: 3vh;
+}
+
+.bookRenewTime {
+    color: green;
+}
+.bookRenewDetails {
+    font-family: "catamaran";
+    font-size: 14pt;
+}
+.bookImg {
+        width: 41%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
+.headingIssued{
+   color:#3F51B5;
+  font-size: 18pt;
+  font-style: bold;
+font-family: "catamaran";
+margin-top:5%; 
+}
+.NoBooks{
+    color:#FF3D00;
+    font-size: 14pt;
+  font-style: italic;
+// font-family: "Berlin Sans FB"; 
+margin-top:20%;
+}
+.issuedHistory{
+       color: #FFFFFF!important;
+;
+}
+}

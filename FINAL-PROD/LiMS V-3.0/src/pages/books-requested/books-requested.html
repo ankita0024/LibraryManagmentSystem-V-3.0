@@ -1,0 +1,42 @@
+<!--
+  Generated template for the BooksRequested page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar class="secondary">
+        <ion-title class="title">
+            Books Requested
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="detailViewPage" *ngFor='let b of book'>
+        <ion-row class="bookDiv">
+            <ion-col width-33>
+                <img class="img-thumbnail bookImg" src="{{b.image}}" alt="book Image">
+            </ion-col>
+            <ion-col width-67 class="rightAlign">
+
+                <span class="bookTitle">Title : {{b.title}}</span><br>
+                <span class="bookAuthor">MID : {{b.mId}}<br></span><br>
+                <span class="bookPublisher">Date : {{b.requestedOn}}<br></span>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button round ion-button color="danger" (click)="issueBook(b.mId,b.isbn)">Issue</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button round ion-button color="danger" (click)="declineBook(b.mId,b.isbn)">Decline</button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

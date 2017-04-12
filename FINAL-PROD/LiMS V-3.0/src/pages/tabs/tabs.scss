@@ -1,0 +1,29 @@
+.tabs-md .tab-button-icon{
+    font-size:3.25rem;
+}
+
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=title-hide] .tab-button, .tabs-md .tab-button.icon-only, .tabs-md .tab-button.has-title-only{
+    background-color: #2A327E;
+}
+// .tabs-md .tab-button[aria-selected=true]{
+//     color:white;
+// }
+.ion-md-home:before{
+    color:white;
+}
+.ion-md-search:before{
+     color:white;
+}
+.ion-md-notifications:before{
+    color:white;
+}
+.ion-md-help:before{
+    color:white;
+
+}
+.ion-md-book:before{
+    color:white;
+}
+.badge-container{
+   position: relative;
+}

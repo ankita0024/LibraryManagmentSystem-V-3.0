@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar>
+        <ion-title class="title">
+            Reports
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button class="button1" full (click)="booksIssuedHistory()">History of Book Issued </button>
+    <!--<button ion-button class="button2" full (click)="listofbookreturned()">List of Book Returned </button> <br> <br>-->
+    <br><br>
+    <button ion-button class="button2" full (click)="booksReturnedHistory()">History of Books Returned</button>
+</ion-content>

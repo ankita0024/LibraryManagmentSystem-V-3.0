@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Wish List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf='(book.length>0)' padding>
+
+<ion-card *ngFor='let b of book'>
+
+          <ion-row class="bookDiv">
+          <ion-col width-33>
+
+            <img class="img-thumbnail bookImg" src="{{b[0].image}}" alt="book Image">
+            <button ion-button round ion-button color="danger" (click)="removeBook([b[0].isbn])" [disabled]=isDisabled>Remove It</button>
+          </ion-col>
+          <ion-col width-67 class="rightAlign">
+
+            <div class="bookTitle">Name: {{b[0].title}}<br></div><br>
+            <div class="bookAuthor">Author: {{b[0].authors}}<br></div><br>
+           <span class="bookRenewDetails">Available: <span class="bookRenewTime">{{b[0].available}}</span></span>
+           
+          </ion-col>
+          
+           </ion-row>
+    
+
+  </ion-card>
+
+
+
+</ion-content>
+<ion-content *ngIf='(book.length<=0)' padding>
+  <p class="content" style="font-family:Droid Serif;font-size:2em;text-align: center;">You have not added any books yet. </p>
+  </ion-content>

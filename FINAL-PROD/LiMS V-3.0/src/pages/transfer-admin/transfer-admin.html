@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar color="secondary">
+        <ion-title class="title">
+            Admin Acess
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="abc">
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+            <h2>
+
+                <b>  Name :</b> {{name}}
+                <br><br>
+                <b>MID :</b> {{mid}}
+                <br>
+                <br><br>
+                <b> Select Admin :</b>
+
+                <!--</h2>-->
+                <select name="dropdown" [(ngModel)]="selectedValue">
+    <option value="{{ad.mId}}" *ngFor="let ad of admins">{{ad.name}}</option>
+    
+    
+  </select>
+            </h2>
+            <br>
+            <br>
+            <br>
+            <button class="button1" ion-button (click)="save(selectedValue)">Save & Logout</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+

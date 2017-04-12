@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar>
+        <ion-title class="title">
+            Book Returned History
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card class="detailViewPage" *ngFor='let b of book'>
+        <ion-row class="bookDiv">
+            <ion-col width-33>
+                <img class="img-thumbnail bookImg" src="{{b.image}}" alt="book Image">
+            </ion-col>
+            <ion-col width-67 class="rightAlign">
+
+                <span class="bookTitle">Title : {{b.title}}</span><br>
+                <span class="bookAuthor">MID : {{b.mId}}</span><br>
+                <span class="bookPublisher">Returned-Date : {{b.returnedOn}}<br></span>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,36 @@
+<!--
+  Generated template for the BooksReturned page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar class="secondary">
+        <ion-title class="title">
+            Books Return
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card class="detailViewPage" *ngFor='let b of book'>
+        <ion-row class="bookDiv">
+            <ion-col width-33>
+                <img class="img-thumbnail bookImg" src="{{b.image}}" alt="book Image">
+            </ion-col>
+            <ion-col width-67 class="rightAlign">
+
+                <span class="bookTitle">{{b.title}}</span><br><br>
+                <span class="bookAuthor">MID : {{b.mId}}<br></span><br>
+                <span class="bookPublisher">Due-Date : {{b.dueDate}}<br></span>
+
+            </ion-col>
+        </ion-row>
+        <button ion-button round ion-button color="danger" (click)="returnBook(b.mId,b.bookId)">Approve</button>
+    </ion-card>
+</ion-content>

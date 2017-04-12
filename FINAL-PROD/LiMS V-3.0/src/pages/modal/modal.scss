@@ -1,0 +1,31 @@
+page-modal {
+    font-family: "roboto";
+    .center {
+        text-align: center;
+    }
+    .sample-modal-page {
+        overflow-y: hidden;
+        font-family: "roboto"
+    }
+}
+
+// .rating {
+//  padding: 5% 2px!important;
+//     background: none;
+//     color: #ffb400;
+// }
+h1 {
+    color: black;
+}
+
+ul {
+    padding: 3px;
+    &.rating li {
+        padding: 1px 2px!important;
+        background: none;
+        color: #ffb400;
+        ion-icon {
+            font-size: 30px;
+        }
+    }
+}

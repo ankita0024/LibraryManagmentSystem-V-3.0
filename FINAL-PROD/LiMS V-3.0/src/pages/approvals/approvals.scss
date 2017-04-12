@@ -1,0 +1,34 @@
+page-approvals {
+    .title {
+        margin-left: 60px;
+    }
+    .button1 {
+        padding: 50px;
+        color: black;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: #CC99FF;
+        
+    }
+    .button2 {
+        padding: 50px;
+        color: black;
+        font-size: 15px;
+        border-radius: 10px;
+        background-color: #CC99FF;
+    }
+    .toolbar-title-md{
+    color:white;
+}
+.toolbar-background-md{
+    background:#424242;
+}
+.toolbar-md-secondary .toolbar-background-md{
+    background-color: #9E9E9E;
+}
+ .toolbar-md-secondary .bar-button-default-md{
+     margin:-1px;
+ }
+ .toolbar-md-secondary .toolbar-title-md {margin-left: -60px;}
+}
+ 

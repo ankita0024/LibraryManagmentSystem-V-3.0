@@ -1,0 +1,71 @@
+page-detail-view {
+    font-family: "roboto";
+    .bookImage {
+        height: 25vh;
+    }
+    .bookRenewTime {
+        color: green;
+    }
+    .bookRenewDetails {
+        font-family: "catamaran";
+        font-size: 11pt;
+    }
+    .bookDetails {
+        text-align: right;
+    }
+    .bookTitle {
+        font-family: "catamaran";
+        font-size: 15pt;
+        line-height: 3vh;
+        font-weight: 600;
+    }
+    .bookAuthor {
+        font-family: "roboto";
+        font-size: 11pt;
+        line-height: 3vh;
+    }
+    .rightAlign {
+        text-align: right;
+        margin-top: 3%;
+    }
+    // .bookViewDetails {
+    //     height: 35vh;
+    //     overflow-x: hidden;
+    //     font-family: "roboto";
+    // }
+    //  .bookViewDescription {
+    //     /*padding-top: 2vh;*/
+    //      font-family: "catamaran";
+    //     padding: 2%;
+    //     font-size: 12pt;
+    //     border-bottom: 1px solid gray;
+    //       font-weight: bold;
+    // }
+    // .detailViewshadowDiv {
+    //     margin: 1.5vh 2vw 1.5vh 2vw;
+    //     background-color: white;
+    //     box-shadow: 2px 2px 2px #888888;
+    //        overflow-x: hidden;
+    // }
+    .detailViewPage {
+      //  margin-top: 20%;
+        font-family: "roboto";
+    }
+    .toast-message {
+        font-family: Helvetica;
+        color: red;
+        // margin-bottom: 20px;
+    }
+    ul {
+        padding: 0px;
+        &.rating li {
+            padding: 1px 2px!important;
+            background: none;
+            color: #ffb400;
+            ion-icon {
+                font-size: 30px;
+            }
+        }
+    }
+
+}

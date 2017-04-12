@@ -1,0 +1,300 @@
+page-home {
+
+ font-family: "roboto";
+.divTitle {
+    margin-top: 4%;
+     font-family: "catamaran";
+    font-weight: bold;
+
+  display:inline-block;
+  color:black;
+//   line-height: 2;
+  font-size: 20px;
+//   padding-left: 2vh;
+//   padding-bottom: 1vh;
+}
+.bookImg {
+  height: 18vh;
+width: initial;
+//   width:100%;
+}
+.navbarButtons{
+    display: inline;
+}
+
+.header{
+    display: inline-block;
+}
+
+.noBooks{
+    margin-top: 1em;
+}
+
+
+.bookDiv{
+    width:100%;
+}
+.homePage{
+  margin-top: 4.8em;
+  overflow-y: auto;
+  height: 80%;
+  font-family: "roboto";
+  background-color: #E0E0E0!important;
+  
+  
+  
+}
+.myHome {
+  /*background-color: ;*/
+  color: #2980b9;
+  font-size: 18pt;
+  font-family: 'Berlin Sans FB';
+  text-align: center;
+}
+.myHomePage {
+  padding: 5%;
+  align-content: center;
+  /*margin-left: 45%;*/
+  position: relative;
+  -webkit-animation: myfirst 10s infinite;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-direction: alternate;
+  /* Chrome, Safari, Opera */
+  animation: myfirst 10s infinite;
+  animation-direction: alternate;
+}
+.bookDetails {
+    text-align: right;
+}
+
+.bookTitle {
+    // font-family: "Berlin Sans FB";
+    // font-size: 20pt;
+    // line-height: 3vh;
+        font-family: "catamaran";
+    font-size: 14pt;
+    font-weight: 600;
+    /* font-weight: lighter; */
+    // text-transform: lowercase
+}
+
+
+.bookAuthor {
+    font-family: "roboto";
+    font-size: 12pt;
+    line-height: 3vh;
+}
+
+.bookRating {
+    line-height: 2;
+    padding-bottom: 1vh;
+}
+
+
+.dueDate{
+    color:#2A327E ;
+        font-size: 13pt;
+        font-family:  "roboto";
+}
+.bookRenewTime{
+    color:green ;
+        font-size: 13pt;
+        font-family:  "roboto";
+}
+.bookRenewDetails {
+        font-family:"catamaran" ;
+      font-size: 13pt;
+    // font-weight: 600;
+}
+
+.bookRenewButtonsDiv {
+    /*position: absolute;*/
+//     padding-top: 2;
+//     padding-left: 10vw;
+//     padding-bottom: 2%;
+float:right
+}
+
+.bookRenewButtons {
+    // line-height: 2vh;
+    // font-size: 10pt;
+    // margin-top: 13%;
+    color:black;
+    font-weight:bold;
+        font-size: 1.2em;
+    text-transform: none!important;
+        padding: 1.2em 0;
+    // border-radius: 14pt;
+    // margin-right: 6vw;
+    // width: 34.4vw;
+    // height: 3.75vh;
+}
+.rightAlign{
+    text-align: -webkit-right
+}
+
+.shadowDiv {
+  margin: 86.5vh 2vw 1.5vh 2vw;
+  background-color: white;
+  box-shadow: 2px 2px 2px #888888;
+  position: fixed;
+  bottom:0;
+}
+.generalInfo {
+  padding-top: 1vh;
+}
+.dashboard {
+    height: 20vh;
+}
+
+.issueInfo3 {
+  background-color: #2980b9;
+}
+
+.generalInfo .issueInfo .issueInfoText {
+  /*padding: 0;*/
+  line-height: 0.5;
+  font-size: 12pt;
+}
+.issuedCircle1{
+    float:right;
+    border-radius:50%;
+    border-right:5px solid #BDBDBD;
+    // border-top:5px solid  linear-gradient( blue , grey);
+    border-bottom: 5px solid #BDBDBD;
+    border-left:5px solid #283593;
+       width: 3.2em;
+    height: 3.2em;
+    margin-top: 3%;
+}
+.issuedCircle2{
+    float:right;
+    border-radius:50%;
+    border-right:5px solid #BDBDBD;
+    // border-top:5px solid  linear-gradient( blue , grey);
+    border-bottom: 5px solid #283593;
+    border-left:5px solid #283593;
+       width: 3.2em;
+    height: 3.2em;
+    margin-top: 3%;
+}
+.issuedCircle3{
+    float:right;
+    border-radius:50%;
+    border-right:5px solid #283593;
+    border-top:5px solid  #283593;
+    border-bottom: 5px solid #283593;
+    border-left:5px solid #283593;
+      width: 3.2em;
+    height: 3.2em;
+    margin-top: 3%;
+    .Circletext{
+       margin: 0.3em;
+    }
+}
+.Circletext{
+    // margin:0 auto;
+    color:#2A327E;
+   text-align: center;
+    margin: 0.5em auto;
+    font-size: 1.2em;
+     font-family: 'catamaran';
+     font-weight: 700;
+}
+.returnIcon{
+    color:#00897B;
+        font-size: 1.8em;
+}
+.renewIcon{
+  color:#2A327E;
+        font-size: 1.8em;  
+}
+.cardAction{
+          height: 3.5em;
+    margin-top: -4%;
+
+}
+.collectMsg {
+        font-family:"catamaran" ;
+      font-size: 13pt;
+      background-color: #BDBDBD;
+    font-weight: 600;
+ 
+}
+.returnMsg {
+        font-family:"catamaran" ;
+      font-size: 13pt;
+      background-color:#EF9A9A;
+    font-weight: 600;
+}
+.cancelButton{
+    margin-left: 49%;
+    color:red;
+}
+
+
+.error .toast-wrapper .toast-container {
+    background-color: #F44336!important;
+    font-family: 'roboto';
+    border:2px bold black;
+}
+.success .toast-wrapper .toast-container {
+    background-color: #2E7D32!important;
+    font-family: 'roboto';
+    border:2px bold black;
+}
+.info .toast-wrapper .toast-container {
+    background-color: #039BE5!important;
+    font-family: 'roboto';
+    border:2px bold black;
+}
+.oops .toast-wrapper .toast-container {
+    background-color: #FFD740!important;
+    font-family: 'roboto';
+    .toast-message{
+     color:black;
+    }
+    .toast-button .button-inner{
+        color:black;
+    }
+       
+    
+}
+  .popover-md .popover-content{
+      width: 272px!important;
+    }
+    
+     .popover-ios .popover-content{
+      width: 272px!important;
+    }
+      .fixed-content{
+          background-color: white;
+         //background-image: url("https://gplfortheloveofbooks.files.wordpress.com/2014/02/books_feature.jpg" );
+         
+      }
+      .style{
+ margin-top:0px;
+          margin-bottom:0px;
+      }
+   
+  .homePage{
+     margin-top:0em;
+      height:100%;
+     background-color:white !important;
+ }
+ .card-md{
+     background-color: #FAFAFA;
+     margin:0px;
+     width:100%;
+ }
+  .collectMsg{
+      background-color:#8BC34A;
+  }
+ .homePage{
+      margin-top:2em;
+  }
+  
+      } 
+
+ 
+
